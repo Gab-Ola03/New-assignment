@@ -1,0 +1,131 @@
+1. matrices
+using System;
+
+public class MatrixAddition
+{
+    public static void Main()
+    {
+        Console.WriteLine("Enter the number of rows for the matrices:");
+        int rows = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter the number of columns for the matrices:");
+        int columns = Convert.ToInt32(Console.ReadLine());
+
+        int[,] matrix1 = new int[rows, columns];
+        int[,] matrix2 = new int[rows, columns];
+        int[,] sumMatrix = new int[rows, columns];
+
+        Console.WriteLine("Enter the elements of the first matrix:");
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("Enter element at position ({0}, {1}): ", i, j);
+                matrix1[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        Console.WriteLine("Enter the elements of the second matrix:");
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("Enter element at position ({0}, {1}): ", i, j);
+                matrix2[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                sumMatrix[i, j] = matrix1[i, j] + matrix2[i, j];
+            }
+        }
+
+        Console.WriteLine("The sum of the matrices is:");
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write(sumMatrix[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+2. uppercase statement 
+using System;
+
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine();
+        
+        string uppercaseString = input.ToUpper();
+        
+        Console.WriteLine("The string in uppercase is: " + uppercaseString);
+    }
+}
+
+3. ascending order
+using System;
+
+public class Program
+{
+    public static void Main(string[]args)
+    {
+        int[] numbers = new int[3];
+        
+        Console.WriteLine("Enter the first number:");
+        numbers[0] = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Enter the second number:");
+        numbers[1] = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Enter the third number:");
+        numbers[2] = Convert.ToInt32(Console.ReadLine());
+        
+        Array.Sort(numbers);
+        
+        Console.WriteLine("The numbers in ascending order are:");
+        
+        foreach(int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+    }
+}
+4. number check
+using System;
+
+namespace classnumber
+{
+class Program
+{
+    public static void Main(string []args)
+    {
+        Console.WriteLine("Enter your number:");
+        int number =
+        Convert.ToInt32(Console.ReadLine());
+        if (number > 0) 
+        {
+        Console.WriteLine("the number {0} is positive.", number);
+        }
+        else if (number < 0)
+        {
+        Console.WriteLine("the number {0} is negative.", number);
+        }
+        else
+        {
+        Console.WriteLine("the number is zero");
+        }
+    }
+}
+}
